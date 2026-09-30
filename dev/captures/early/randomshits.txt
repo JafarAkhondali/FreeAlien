@@ -1,0 +1,75 @@
+    public static Guid SYSTEMDEFAULTID = Guid.Parse("B5797A5D-4EE5-42EE-BE08-01A534B22FBD");
+    public static Guid PERFORMANCE_SYSTEM_ID = Guid.Parse("61523834-D516-4703-8312-59BC8D4521CB");
+    public static Guid FX_SYSTEM_ID = Guid.Parse("0FBDE5A5-87D2-46B1-947E-C48FB4EE2A4B");
+    public static Guid GAMELIBRARY_SYSTEM_ID = Guid.Parse("F857C145-C661-4DD3-BC42-5C3F82B2A748");
+    public static Guid DOLBYATMOS_ID = Guid.Parse("FF1B1FE4-5C9F-4FE0-8BBD-F33A033C7018");
+    public static Guid GAMEDASHBOARDLAYOUTID = Guid.Parse("CF2C56C4-49A4-450D-B176-993B9AC465FE");
+    public static Guid DEFAULTDASHBOARDLAYOUTID = Guid.Parse("C02545AB-D41D-4007-A9EB-36FC4C5DBBE3");
+    public static Guid SETTINGSLAYOUTID = Guid.Parse("C4C45181-43F0-4120-AB11-ABFF96B58A96");
+    public static Guid HELPLAYOUTID = Guid.Parse("BD2A7BEC-369E-41A1-8DE0-A747CCA5F128");
+    public static Guid FEEDBACKLAYOUTID = Guid.Parse("CBD2A7BE-8DE0-41A1-369E-A5F1247CC8A7");
+    public static Guid GAMETITLELAYOUTID = Guid.Parse("8E42F7D7-E6CD-468C-A761-E4E05FEE5CDD");
+    public static Guid SETTINGS_PAGE_LAYOUTID = Guid.Parse("139A0DEF-1C2D-4896-8897-53B596CB348B");
+    public static Guid MODULEPAGELAYOUTID = Guid.Parse("139A0DEF-1C2D-4896-8897-53B596CB348A");
+    public static Guid PERFORMANCEMODULELAYOUT_ID = Guid.Parse("7EA4770C-141B-4177-AC68-7C3B923EB3B8");
+    public static Guid FXMODULELAYOUT_ID = Guid.Parse("2CEFF7BF-BE08-4726-9C7F-EF47DB56260F");
+    public static Guid GAMELIBRARYMODULELAYOUT_ID = Guid.Parse("2C8B0D57-AC9D-44AE-830D-F8ED9FD6D875");
+    public static Guid DOLBYATMOSLAYOUT_ID = Guid.Parse("661828F6-3E44-4EE2-AEDC-16AB9B845BA3");
+    public static Guid GLOBALPRESETSETTINGS_CONTROL_ID = Guid.Parse("867E18BA-FD73-4800-BE4B-E7875FD512EE");
+    public static Guid PERFORMANCETSETTINGS_CONTROL_ID = Guid.Parse("73CCDDBE-F731-4E66-B2A6-A26661BF4E4E");
+    public static Guid CORE_SUBSYSTEM_ID = Guid.Parse("671B989E-AA4D-4DAA-9976-3944700AAF10");
+
+
+
+DeviceManagerUI
+ReportThemeChanged
+
+
+====
+DEBUG:
+FXDomain
+
+==
+This updates the colors:
+this.DeviceCanvasVM?.UpdateGroupColors(this.SetColorsToLedGroups());
+Looks like through this:
+WeakReferenceMessenger.Default.Send<GroupColorsEventArgs>(new GroupColorsEventArgs(groupColors));
+
+====
+Device id:
+0x1102_AdvKB
+
+Alienware M16 R2 Advanced KB
+0xD2B1
+Device type: InternalKeyboard
+	-> ID: 6
+
+C:\Program Files\Alienware\Alienware Command Center\Subsystems\FX\FXPlugins\FX_FEDev.Dell.Gaming.Platforms\FX.DCF.Plugin.Dell.0x1102.2024.dll
+
+{_leds: Count = 92}
+
+FX.Domain.Classes.AlienFXModel
+
+public static Guid SYSTEM_DEFAULT_GAMEID = Guid.Parse("b5797a5d-4ee5-42ee-be08-01a534b22fbd");
+
+
+
+Plugin GUID:
+        PluginGuid = Guid.Parse("{15FFB0E7-6549-4300-AD19-E118F6ACCCE7}"),
+
+Game ID : b5797a5d-4ee5-42ee-be08-01a534b22fbd
+
+======================== FAN RELATED ====================================
+AWCC.Performance.UI.ViewModel.FanViewModel
+
+
+
+Bus 001 Device 005: ID 187c:0551 Alienware Corporation AW-ELC
+=====================================================================================
+We need to understand USB URB.
+Currently, data is being sent to USB URB Function: 27 and received via USB URB Fucntion 8
+
+
+
+
+

@@ -1,0 +1,1 @@
+brightness uses 3bytes with same values, between 0 to ff(in UI it's between 0 to 100)

@@ -1,0 +1,1 @@
+It's either 0 or 1

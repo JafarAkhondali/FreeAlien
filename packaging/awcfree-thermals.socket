@@ -1,0 +1,13 @@
+[Unit]
+Description=FreeAlien thermal control socket
+
+[Socket]
+ListenStream=/run/awcfree-thermals.sock
+SocketUser=@UID@
+SocketGroup=root
+SocketMode=0600
+RemoveOnStop=yes
+Backlog=8
+
+[Install]
+WantedBy=sockets.target

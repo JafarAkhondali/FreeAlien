@@ -1,0 +1,51 @@
+#include <windows.h>
+#include <usb.h>
+#include <stdio.h>
+
+#define USB_URB_FUNCTION 27  // Your specific function ID
+
+int main() {
+    // Open the USB device handle
+    HANDLE hDevice = CreateFile(L"\\\\.\\USB#VID_187C&PID_0551#0004#0000",
+        GENERIC_WRITE | GENERIC_READ,
+        0,
+        NULL,
+        OPEN_EXISTING,
+        0,
+        NULL);
+
+    if (hDevice == INVALID_HANDLE_VALUE) {
+        printf("Error opening device\n");
+        return 1;
+    }
+
+    // Define the data you want to send
+    unsigned char data[] = { 0x33, 0x03, 0x24, 0x00, 0x07, 0xd0, 0x00, 0xfa, 0xff, 0xff, 0xff, 0x00, 0x00, 0x00, 0x00,
+                             0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                             0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+
+    // Set up the URB (USB Request Block) structure (simplified example)
+    URB urb;
+    memset(&urb, 0, sizeof(URB));
+
+    // Populate the URB with the required values (URB_FUNCTION, data size, etc.)
+    urb.Function = USB_URB_FUNCTION;
+    urb.TransferBufferLength = sizeof(data);
+    urb.TransferBuffer = data;
+
+    // Send the data using DeviceIoControl (USB_IOCTL or related)
+    DWORD bytesReturned;
+    BOOL result = DeviceIoControl(hDevice, IOCTL_USB_SEND_URB, &urb, sizeof(urb), NULL, 0, &bytesReturned, NULL);
+
+    if (!result) {
+        printf("Error sending URB: %lu\n", GetLastError());
+        CloseHandle(hDevice);
+        return 1;
+    }
+
+    printf("Data sent successfully!\n");
+
+    // Close the handle
+    CloseHandle(hDevice);
+    return 0;
+}

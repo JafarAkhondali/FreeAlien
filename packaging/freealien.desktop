@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=FreeAlien
+GenericName=Alienware Device Control
+Comment=Alienware lighting, temperatures, thermal profiles and fan boost
+Exec=freealien gui
+Icon=freealien
+Terminal=false
+Categories=Settings;HardwareSettings;Utility;
+Keywords=rgb;keyboard;backlight;alienware;lighting;fans;thermals;
+StartupNotify=true

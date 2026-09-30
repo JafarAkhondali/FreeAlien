@@ -1,0 +1,37 @@
+# Python and test/build output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Editors, local agents, and credentials
+.idea/
+.vscode/
+.agents/
+.codex/
+.aws/
+.env
+.env.*
+!.env.example
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Local archives, scratch measurements and recordings (not curated fixtures)
+/dev/local/
+/backup.zip
+/identified_keys.txt
+/mapper_results.txt
+*.log

@@ -1,0 +1,9 @@
+# awcfree: let the logged-in user drive the Alienware lighting controllers.
+#
+# The keyboard's LED controller answers on interface 00 only. Typing does not go
+# through this device -- the built-in keyboard is an i8042 device -- so granting
+# access here cannot affect input.
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="0d62", ATTRS{idProduct}=="d2b1", ENV{ID_USB_INTERFACE_NUM}=="00", TAG+="uaccess"
+
+# The AW-ELC chassis controller: touchpad, lid emblem, and power button.
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="187c", ATTRS{idProduct}=="0551", TAG+="uaccess"
