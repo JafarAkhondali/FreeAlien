@@ -20,7 +20,7 @@
 
 <p align="center">
   <img src="docs/freealien-demo.gif" alt="FreeAlien controlling Alienware keyboard and touchpad lighting" width="640">
-  <br><sub>A short demo on real hardware.</sub>
+  <br><sub>You can actually play games on the keyboard itself!</sub>
 </p>
 
 ## The studio
